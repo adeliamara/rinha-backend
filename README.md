@@ -2,7 +2,7 @@
 
 Projeto criado com base em https://github.com/zanfranceschi/rinha-de-backend-2023-q3/blob/main/INSTRUCOES.md
 
-Deploy disponível em 
+Deploy disponível em  https://rinha-backend-production.up.railway.app/
 
 Requisitos técnicos:
 
