@@ -17,7 +17,7 @@ class PeopleService
       end
     
 
-    def self.getAll(person_params)
+    def self.getAll()
         Person.all
     end
 
@@ -30,9 +30,8 @@ class PeopleService
             query1 = Person.select(:id).where("nickname LIKE ? OR name LIKE ?", "%#{search_param}%", "%#{search_param}%")
             query2 = Person.select(:id).joins(:stacks).where("stacks.description LIKE ?", "%#{search_param}%")
 
-             resultados = Person.where(id: query1).or(Person.where(id: query2))
-        
-        rescue ActiveRecord::RecordNotFound => e
+            resultados = Person.where(id: query1).or(Person.where(id: query2))
+          rescue ActiveRecord::RecordNotFound => e
           puts "Erro na consulta: #{e.message}"
         end
     end

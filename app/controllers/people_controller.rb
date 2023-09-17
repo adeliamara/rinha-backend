@@ -31,12 +31,6 @@ class PeopleController < ApplicationController
       render json: @person.errors, status: :unprocessable_entity
     end
   end
-
-  # GET /people/count
-  def search
-    @person = PeopleService.search()
-  end
-
   
   private
     # Use callbacks to share common setup or constraints between actions.
